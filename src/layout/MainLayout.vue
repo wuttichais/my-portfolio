@@ -21,6 +21,7 @@
                         stretch
                         toggle-color="black"
                         :options="headMenuList"
+                        class="toggle-menu"
                     />
                 </q-toolbar>
             </q-header>
@@ -123,6 +124,9 @@ export default defineComponent({
         .toolbar {
             height: 100%;
             display: flex;
+            .toggle-menu {
+                font-weight: 700;
+            }
         }
     }
 }
