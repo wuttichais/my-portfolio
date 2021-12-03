@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>
+    <MainLayout @btnClick="onClickBtnNav">
         <template #pageContainer>
             <AboutMes />
             <PerosonalProfile />
@@ -7,6 +7,7 @@
             <Skills />
             <WorkExperience />
             <MyWorks />
+            <Footer />
         </template>
     </MainLayout>
 </template>
@@ -20,6 +21,7 @@ import Education from '@/components/landingPage/Education.vue'
 import Skills from '@/components/landingPage/Skills.vue'
 import WorkExperience from '@/components/landingPage/WorkExperience.vue'
 import MyWorks from '@/components/landingPage/MyWorks.vue'
+import Footer from '@/components/landingPage/Footer.vue'
 
 export default defineComponent({
 	name: 'LandingPage',
@@ -30,7 +32,16 @@ export default defineComponent({
 		Education,
 		Skills,
 		WorkExperience,
-		MyWorks
+		MyWorks,
+		Footer
 	},
+	setup () {
+		const onClickBtnNav = (value: any) => {
+			console.log('value --> ', value)
+		}
+		return {
+			onClickBtnNav
+		}
+	}
 })
 </script>

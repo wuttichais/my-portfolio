@@ -22,6 +22,7 @@
                         toggle-color="black"
                         :options="headMenuList"
                         class="toggle-menu"
+                        @click="$emit('btnClick', headMenu)"
                     />
                 </q-toolbar>
             </q-header>
@@ -119,6 +120,9 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .layout-container {
+    main.q-page.q-layout-padding {
+        padding: unset !important;
+    }
     .header {
         height: 70px;
         .toolbar {
