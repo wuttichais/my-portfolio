@@ -12,7 +12,6 @@
                         round
                         dense
                         icon="menu" />
-                    
                     <q-space />
                     
                     <q-btn-toggle
@@ -120,6 +119,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .layout-container {
+    // background-image: ;
     main.q-page.q-layout-padding {
         padding: unset !important;
     }
@@ -128,8 +128,10 @@ export default defineComponent({
         .toolbar {
             height: 100%;
             display: flex;
-            .toggle-menu {
-                font-weight: 700;
+            :deep(.toggle-menu) {
+                span {
+                    font-weight: 900;
+                }
             }
         }
     }

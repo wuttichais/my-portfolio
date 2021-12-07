@@ -6,7 +6,7 @@
 				<div class="row">
 					<div class="col col-md-6 text-center image-blog">
 						<q-img
-							src="https://placeimg.com/500/300/nature"
+							:src="require('@/assets/profile/profile.png')"
 							class="image-profile"
 							/>
 					</div>
@@ -53,11 +53,11 @@ export default defineComponent({
 		align-items: center;
 		.name {
 			font-size: 36px;
-			font-weight: 700;
+			font-weight: 900;
 		}
 		.job {
 			font-size: 18px;
-			font-weight: 700;
+			font-weight: 900;
 			margin-left: 5px;
 		}
 	}

@@ -5,7 +5,7 @@
             <div class="col col-md-8">
                 <div class="row">
                     <div class="col col-md-12 text-center title-blog">
-                        <p class="title">Work Experience</p>
+                        <p class="title">My Works</p>
                     </div>
                 </div>
                 <div class="row">

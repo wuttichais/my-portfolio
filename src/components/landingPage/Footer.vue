@@ -5,10 +5,12 @@
             <div class="col col-md-8">
                 <div class="row">
                     <div class="col col-md-2 text-center image-profile">
-                        <q-img
-                            src="https://placeimg.com/500/300/nature"
-                            class="image"
-                            />
+                        <div class="image-layout">
+                            <q-img
+                                :src="require('@/assets/profile/profile2.jpeg')"
+                                class="image"
+                                />
+                        </div>
                     </div>
                     <div class="col col-md-7 social-contact">
                         <div class="row">
@@ -20,21 +22,18 @@
                                     <div class="col col-md-2 icon-layout">
                                         <q-img
                                             :src="sItem.icon"
-                                            class="icon"
+                                            :class="`icon ${sItem.name}`"
                                             />
                                     </div>
-                                    <div class="col col-md-10 label">{{ sItem.label }}</div>
+                                    <div :class="`col col-md-10 label ${sItem.name}`">{{ sItem.label }}</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col col-md-3 address">
                         <div class="row">
-                            <div class="col col-md-2">
-                                <q-img
-                                    :src="require('@/assets/logo.png')"
-                                    class="icon"
-                                    />
+                            <div class="col col-md-2 text-center">
+                                <q-icon name="place" class="place-icon" />
                             </div>
                             <div class="col col-md-10 detail">
                                 <span>217 Moo 4 Takam Rd.</span> <br/>
@@ -46,7 +45,7 @@
                 </div>
                 <div class="row">
                     <div class="col col-md-9"></div>
-                    <div class="col col-md-3 text-center copy-right">
+                    <div class="col col-md-3 copy-right">
                         <span>Copyright © 2021 Wuttichai S.</span>
                     </div>
                 </div>
@@ -61,6 +60,7 @@ import { defineComponent, ref } from '@vue/runtime-core'
 
 interface SocialContactI {
     id: number,
+    name: string,
     icon: string,
     label: string
 }
@@ -69,11 +69,11 @@ export default defineComponent({
 	name: 'Footer',
 	setup () {
 		const socialContact = ref<SocialContactI[]>([
-			{ id: 1, icon: require('@/assets/logo.png'), label: 'github.com/wuttichais'},
-			{ id: 2, icon: require('@/assets/logo.png'), label: 'facebook.com/theboyzlp'},
-			{ id: 3, icon: require('@/assets/logo.png'), label: 'theboyzlp'},
-			{ id: 4, icon: require('@/assets/logo.png'), label: 'bs.wuttichai@gmail.com'},
-			{ id: 5, icon: require('@/assets/logo.png'), label: '090 673 4094'},
+			{ id: 1, name: 'github', icon: require('@/assets/footer/github.png'), label: 'github.com/wuttichais'},
+			{ id: 2, name: 'facebook', icon: require('@/assets/footer/facebook.png'), label: 'facebook.com/theboyzlp'},
+			{ id: 3, name: 'line', icon: require('@/assets/footer/line.png'), label: 'theboyzlp'},
+			{ id: 4, name: 'gmail', icon: require('@/assets/footer/gmail.png'), label: 'bs.wuttichai@gmail.com'},
+			{ id: 5, name: 'tel', icon: require('@/assets/footer/tel.png'), label: '090 673 4094'},
 		])
         
 		return {
@@ -91,46 +91,66 @@ export default defineComponent({
     background: #1876D1;
     color: #ffffff;
     .image-profile {
-        .image {
-            width: 80px;
-            height: 80px;
+        display: flex;
+        justify-content: center;
+        .image-layout {
+            width: 70px;
+            height: 70px;
+            border: 1px solid #2c2b2b;
             border-radius: 5px;
+            padding: 5px;
+            .image {
+                height: 100%;
+                border-radius: 5px;
+            }
         }
     }
     .social-contact {
+        margin-top: 5px;
         .social-col:nth-child(1) {
             margin-top: unset;
         }
         .social-col {
-            margin-top: 7px;
+            margin-top: 5px;
         }
         .icon-layout {
-            width: 25px;
-            height: 25px;
+            width: 20px;
+            height: 20px;
             border-radius: 3px;
             background: #ffffff;
             margin-right: 15px;
+            .icon {
+                border-radius: 3px;
+                width: 20px;
+                height: 20px;
+                margin-bottom: 5px;
+            }
         }
         .label {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
+            &.tel {
+                margin-top: 2px;
+                font-size: 12px;
+            }
         }
     }
     .address {
-        .icon {
-            width: 25px;
-            height: 25px;
-            border-radius: 3px;
-            background: #ffffff;
+        margin-top: 5px;
+        .place-icon {
+            font-size: 18px;
         }
         .detail {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
         }
     }
     .copy-right {
-        font-size: 12px;
-        font-weight: 700;
+        span {
+            margin-left: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
     }
 }
 </style>
