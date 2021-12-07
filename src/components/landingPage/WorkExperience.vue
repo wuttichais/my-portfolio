@@ -64,7 +64,7 @@ export default defineComponent({
     margin-top: 10%;
     .title-blog {
         .title {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
             margin-bottom: 35px;
         }
@@ -80,6 +80,7 @@ export default defineComponent({
             }
             .date {
                 font-size: 14px;
+                font-weight: 400;
             }
             li {
                 font-size: 16px;

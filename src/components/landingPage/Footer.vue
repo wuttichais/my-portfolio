@@ -69,11 +69,11 @@ export default defineComponent({
 	name: 'Footer',
 	setup () {
 		const socialContact = ref<SocialContactI[]>([
-			{ id: 1, name: 'github', icon: require('@/assets/footer/github.png'), label: 'github.com/wuttichais'},
-			{ id: 2, name: 'facebook', icon: require('@/assets/footer/facebook.png'), label: 'facebook.com/theboyzlp'},
-			{ id: 3, name: 'line', icon: require('@/assets/footer/line.png'), label: 'theboyzlp'},
-			{ id: 4, name: 'gmail', icon: require('@/assets/footer/gmail.png'), label: 'bs.wuttichai@gmail.com'},
-			{ id: 5, name: 'tel', icon: require('@/assets/footer/tel.png'), label: '090 673 4094'},
+			{ id: 1, name: 'github', icon: require('@/assets/footer/github.jpg'), label: 'github.com/wuttichais'},
+			{ id: 2, name: 'facebook', icon: require('@/assets/footer/facebook.jpg'), label: 'facebook.com/theboyzlp'},
+			{ id: 3, name: 'line', icon: require('@/assets/footer/line.jpg'), label: 'theboyzlp'},
+			{ id: 4, name: 'gmail', icon: require('@/assets/footer/gmail.jpg'), label: 'bs.wuttichai@gmail.com'},
+			{ id: 5, name: 'tel', icon: require('@/assets/footer/tel.jpg'), label: '090 673 4094'},
 		])
         
 		return {
@@ -128,7 +128,7 @@ export default defineComponent({
         }
         .label {
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 500;
             &.tel {
                 margin-top: 2px;
                 font-size: 12px;
@@ -142,14 +142,14 @@ export default defineComponent({
         }
         .detail {
             font-size: 14px;
-            font-weight: 700;
+            font-weight: 500;
         }
     }
     .copy-right {
         span {
             margin-left: 20px;
             font-size: 12px;
-            font-weight: 700;
+            font-weight: 500;
         }
     }
 }

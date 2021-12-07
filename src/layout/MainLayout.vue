@@ -130,7 +130,7 @@ export default defineComponent({
             display: flex;
             :deep(.toggle-menu) {
                 span {
-                    font-weight: 900;
+                    font-weight: 600;
                 }
             }
         }

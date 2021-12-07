@@ -52,11 +52,11 @@ export default defineComponent({
 		display: flex;
 		align-items: center;
 		.name {
-			font-size: 36px;
+			font-size: 38px;
 			font-weight: 900;
 		}
 		.job {
-			font-size: 18px;
+			font-size: 24px;
 			font-weight: 900;
 			margin-left: 5px;
 		}

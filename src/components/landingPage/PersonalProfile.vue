@@ -53,12 +53,12 @@ export default defineComponent({
     margin-top: 10%;
     .detail-blog {
         .title {
-            font-size: 26px;
+            font-size: 28px;
             font-weight: 700;
         }
         .text {
             font-size: 18px;
-            font-weight: 500;
+            font-weight: 600;
         }
     }
     .image-blog {
